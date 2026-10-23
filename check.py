@@ -13,7 +13,9 @@ with sync_playwright() as p:
     title = page.title()
     text = page.inner_text("body")
     b.close()
-
+    
+print("TITRE:", title)
+print("DEBUT:", text[:300])
 if "Spectrum Waves" not in title:
     print("Page mal chargée, on ignore")
     sys.exit(0)
